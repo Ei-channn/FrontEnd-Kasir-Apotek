@@ -99,26 +99,54 @@ function Dasboard() {
                                 }}                                
                             >
                                 <p>Total Harian</p>
-                                <h3>{laporan.total_harian}</h3>
+                                <h1>{laporan.total_harian}</h1>
                             </div>
                             <div className="sub-container-1">
                                 <p>Transaksi Harian</p>
-                                <h3>{laporan.jumlah_transaksi_harian}</h3>
+                                <h1>{laporan.jumlah_transaksi_harian}</h1>
                             </div>
-                            <div className="sub-container-1">
+                            <div className="sub-container-1"
+                                style={{
+                                    background: "linear-gradient(244deg, #222421 0%, #525252 100%)",
+                                    color: "white"
+                                }}                                
+                            >    
                                 <p>Total Bulanan</p>
-                                <h3>{laporan.total_bulanan}</h3>
+                                <h1>{laporan.total_bulanan}</h1>
                             </div>
                             <div className="sub-container-1">
                                 <p>Transaksi Bulanan</p>
-                                <h3>{laporan.jumlah_transaksi_bulanan}</h3>
+                                <h1>{laporan.jumlah_transaksi_bulanan}</h1>
                             </div>
                         </div>
                         <div className="container-1">
-                            <div className="sub-container-3"></div>
                             <div className="sub-container-2"></div>
+                            <div className="sub-container-3"></div>
                         </div>
                         <div className="container-1">
+                            <div className="sub-container-3">
+                                <h3>Kategori Obat</h3>
+                                <div className="container-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>nama</th>
+                                                <th>jumlah obat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {Array.isArray(kategori) && kategori.map((item) => (
+                                                <tr key={item.id}>
+                                                    <td>{item.id}</td>
+                                                    <td>{item.nama_kategori}</td>
+                                                    <td>{item.obats_count}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                             <div className="sub-container-2">
                                 <h3>Data Obat</h3>
                                 <table>
@@ -143,27 +171,6 @@ function Dasboard() {
                                                 <td>{item.harga}</td>
                                                 <td>{item.stok}</td>
                                                 <td>{item.tanggal_kadaluarsa}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div className="sub-container-3">
-                                <h3>Kategori Obat</h3>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>id</th>
-                                            <th>nama</th>
-                                            <th>jumlah obat</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {Array.isArray(kategori) && kategori.map((item) => (
-                                            <tr key={item.id}>
-                                                <td>{item.id}</td>
-                                                <td>{item.nama_kategori}</td>
-                                                <td>{item.obats_count}</td>
                                             </tr>
                                         ))}
                                     </tbody>

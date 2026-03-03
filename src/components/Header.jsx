@@ -8,7 +8,7 @@ function Header(){
 
                 <div className='container-1'>
                     <div className='container-search'>
-                        
+                        <input type="text" placeholder='Search...'/>
                     </div>
                     <div className='profile'>
 

@@ -49,6 +49,9 @@ main {
   width: 100%;
   background-color: white;
   height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sub-container-2 {
@@ -67,6 +70,12 @@ main {
   width: 100%;
   background-color: white;
   height: 230px;
+}
+
+.container-table {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 }
 
 table {
