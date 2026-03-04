@@ -62,10 +62,17 @@ ul li {
     color: rgb(0, 0, 0);
 }
 
-button  {
+.logout button {
+    width: 100%;
     height: 100%;
-    background-color: transparent;
+    background: transparent;
     border: none;
-    cursor: pointer;
+    text-align: left;
     font-size: 1.3rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+.logout-item:hover button {
+    color: white;
 }
