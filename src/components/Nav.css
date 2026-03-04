@@ -35,6 +35,9 @@
     font-size: 1.3rem;
     padding: 15px;
     transition: all 0.3s ease;
+}
+
+.container-nav nav ul li .link {
     color: rgb(0, 0, 0);
 }
 

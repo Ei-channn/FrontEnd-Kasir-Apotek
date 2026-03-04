@@ -1,15 +1,13 @@
 import './Header.css'
 
-function Header(){
+function Header({title}){
     return (
         <div className='container-header'>
             <header>
-                <h1>Dashboard</h1>
-
+                <div className='title'>
+                    <h1>{title}</h1>
+                </div>
                 <div className='container-1'>
-                    <div className='container-search'>
-                        <input type="text" placeholder='Search...'/>
-                    </div>
                     <div className='profile'>
 
                     </div>

@@ -82,7 +82,7 @@ function Dasboard() {
             <div className="main-container">
                 <Nav />
                 <div className="container-main">
-                <Header />
+                <Header title="Dashboard"/>
                     <main>
                         <div className="container-box">
                             <button onClick={() => setActive(!active)} className={active ? "btn-active" : "btn"}>test</button>

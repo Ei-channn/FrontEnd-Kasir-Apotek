@@ -1,4 +1,5 @@
 import './Nav.css'
+import { Link } from "react-router-dom";
 
 function Nav(){
     return(
@@ -6,11 +7,11 @@ function Nav(){
             <h1>Apotek</h1>
             <nav>
                 <ul>
-                    <a href=""><li>Dashboard</li></a>
-                    <a href=""><li>Kategori obat</li></a>
-                    <a href=""><li>Obat</li></a>
-                    <a href=""><li>Transaksi</li></a>
-                    <a href=""><li>History</li></a>
+                    <Link to="/dashboard"><li>Dashboard</li></Link>
+                    <Link to="/kategori"><li>Kategori Obat</li></Link>
+                    <Link to="/obat"><li>Obat</li></Link>
+                    <Link to="/transaksi"><li>Transaksi</li></Link>
+                    <Link to="/history"><li>History</li></Link>
                 </ul>
                 <ul className='p'>
                     <a href=""><li>Setting</li></a>
