@@ -178,34 +178,36 @@ function Dasboard() {
                             </div>
                         </div>
                         <div className="container-1">
-                            <div className="sub-container-2">
+                            <div className="sub-container-3">
                                 <h3>Data Transaksi</h3>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>no transaksi</th>
-                                            <th>kasir</th>
-                                            <th>bayar</th>
-                                            <th>total</th>
-                                            <th>kembalian</th>
-                                            <th>waktu</th>
-                                            <th>tanggal</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {Array.isArray(transaksi) && transaksi.map((item) => (
-                                            <tr key={item.id}>
-                                                <td>{item.no_transaksi}</td>
-                                                <td>{item.user?.name}</td>
-                                                <td>{item.bayar}</td>
-                                                <td>{item.total_harga}</td>
-                                                <td>{item.kembalian}</td>
-                                                <td>{new Date(item.created_at).toLocaleDateString()}</td>
-                                                <td>{new Date(item.created_at).toLocaleTimeString()}</td>
+                                <div className="container-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>no transaksi</th>
+                                                <th>kasir</th>
+                                                <th>bayar</th>
+                                                <th>total</th>
+                                                <th>kembalian</th>
+                                                <th>waktu</th>
+                                                <th>tanggal</th>
                                             </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                            {Array.isArray(transaksi) && transaksi.map((item) => (
+                                                <tr key={item.id}>
+                                                    <td>{item.no_transaksi}</td>
+                                                    <td>{item.user?.name}</td>
+                                                    <td>{item.bayar}</td>
+                                                    <td>{item.total_harga}</td>
+                                                    <td>{item.kembalian}</td>
+                                                    <td>{new Date(item.created_at).toLocaleDateString()}</td>
+                                                    <td>{new Date(item.created_at).toLocaleTimeString()}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </main>

@@ -1,0 +1,95 @@
+.sub-container-6 {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 50%;
+    background-color: #ffffff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container-7 {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 110%;
+    background-color: #ffffff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.input-container-left {
+    width: 50%;
+}
+.input-container-right {
+    width: 50%;
+}
+
+.container-input {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-input label {
+    padding: 0 0 0 5px;
+    font-size: 1.1em;
+}
+
+.input {
+    background-color: aliceblue;
+    width: 100%;
+    height: 40px;
+}
+
+.input input, select {
+    width: 100%;
+    padding: 20px 5px 15px 5px;
+    border: none;
+    font-size: medium;
+}
+
+input:focus {
+    outline: none;
+}
+
+.container-input:focus-within hr { border-bottom-color: #000000; }
+
+.sub-container-2 .btttn {
+    display: flex;
+    gap: 10px;
+}
+
+.bttn {
+    margin-top: 20px;
+    background: linear-gradient(244deg, #222421 0%, #525252 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+} 
+
+.btttn .btn-delete, .btn-edit {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btttn .btn-edit {
+    background: linear-gradient(244deg, #222421 0%, #525252 100%);
+}
+
+.btttn .btn-delete {
+    background-color: red;
+}

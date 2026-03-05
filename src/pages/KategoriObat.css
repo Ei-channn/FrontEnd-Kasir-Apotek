@@ -13,7 +13,7 @@ main {
 
 .search {
     background-color: #ffffff;
-    width: 300px;
+    width: 30%;
     height: 40px;
     border-radius: 100px;
 }
@@ -31,11 +31,76 @@ main {
     outline: none;
 }
 
-.container-a {
-    margin-top: 20px;
-    border-radius: 20px;
+.test {
+    display: flex;
     width: 100%;
-    background-color: white;
-    height: 100%;
-    padding: 10px;
+    gap: 20px;
 }
+
+.container-data {
+    width: 70%;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* justify-content: space-between; */
+}
+
+.sub-container-4 {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #ffffff;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container-5 {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #ffffff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container-5 .btttn {
+    gap: 10px;
+    display: flex;
+}
+
+.sub-container-5 .btn-delete, .btn-edit {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.sub-container-5 .btn-edit {
+    background: linear-gradient(244deg, #222421 0%, #525252 100%);
+}
+
+.sub-container-5 .btn-delete {
+    background-color: red;
+}
+
+.sub-container-4 h2 {
+    text-align: center;
+}
+
+.sub-container-4 .bttn {
+    margin-top: 20px;
+    background: linear-gradient(244deg, #222421 0%, #525252 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+} 
