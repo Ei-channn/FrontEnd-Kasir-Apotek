@@ -84,13 +84,13 @@ function Dasboard() {
                 <div className="container-main">
                 <Header title="Dashboard"/>
                     <main>
-                        <div className="container-box">
+                        {/* <div className="container-box">
                             <button onClick={() => setActive(!active)} className={active ? "btn-active" : "btn"}>test</button>
                             <button className="btn"></button>
                             <button className="btn"></button>
                             <button className="btn"></button>
                             <div className="sub-container-box-2"></div>
-                        </div>
+                        </div> */}
                         <div className="container-1">
                             <div className="sub-container-1"
                                 style={{

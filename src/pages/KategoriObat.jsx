@@ -84,16 +84,12 @@ function kategoriObat() {
                                             color: "white"
                                         }}    
                                     >
-                                        <div>
-                                            <h3>Data Kategori Obat</h3><br />
-                                            
-                                        </div>
+                                        <p>Total Kategori Obat</p>
+                                        <h1>10</h1>
                                     </div>
                                     <div className="sub-container-1">
-                                        <div>
-                                            <h3>Data Kategori Obat</h3><br />
-                                            
-                                        </div>
+                                        <p>Data Kategori Obat</p>
+                                        <h1>100</h1>    
                                     </div>
                                 </div>
                                 <div className="container-1">

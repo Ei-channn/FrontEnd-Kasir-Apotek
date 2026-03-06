@@ -110,7 +110,29 @@ function Obat(){
                             </div>
                         </div>
                         <div className="container-1">
-                            <div className="sub-container-6"></div>
+                            <div className="sub-container-6">
+                                <h3>Total Data Obat </h3><br /><br />
+                                <h2>99</h2><br /><hr /><br />
+                                <h3>Data Obat Expired</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>no</th>
+                                            <th>nama obat</th>
+                                            <th>kode obat</th>
+                                            <th>expired</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>paracetamol</td>
+                                            <td>F1</td>
+                                            <td>2030-01-01</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <div className="sub-container-7">
                                 <h2>{editId ? "Update" : "Tambah"} Data</h2>
                                     <form onSubmit={handleSubmit}>

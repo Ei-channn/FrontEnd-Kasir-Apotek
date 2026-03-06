@@ -96,6 +96,15 @@ function Transaksi() {
                 <div className="container-main">
                     <Header title="Transaksi" />
                     <main>
+                        <div className="container-search"
+                            style={{
+                                justifyContent: "start"
+                            }}
+                        >
+                            <div className="search">
+                                <input type="text" placeholder="Search by name..."/>
+                            </div>
+                        </div>
                         <div className="container-1">
                             <div className="sub-container-2">
                                 <h3>Data Obat</h3>
