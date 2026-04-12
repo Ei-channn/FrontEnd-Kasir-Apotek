@@ -1,31 +1,34 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import api from "../services/api";
-import "./Transaksi.css";
 
 function Transaksi() {
 
     const [obat, setObat] = useState([]);
+    const [totalData, setTotalData] = useState(0);
+    const [page, setPage] = useState(1);
+    const [lastPage, setLastPage] = useState(1);
     const [cart, setCart] = useState([]);
     const [search, setSearch] = useState("");
     const [total, setTotal] = useState(0);
     const [bayar, setBayar] = useState("");
 
+    const fetchData = async () => {
+        try {
+            const response = await api.get(`/obat?page=${page}`);
+            const paginated = response.data.data;
+            setObat(paginated.data);
+            setTotalData(paginated.total);
+            setLastPage(paginated.last_page);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await api.get("/obat");
-                const paginated = response.data.data;
-                setObat(paginated.data);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-
         fetchData();
-    }, []);
+    }, [page]);
 
     const calculateTotal = (data) => {
         const sum = data.reduce((acc, item) => acc + (item.price * item.qty), 0);
@@ -83,6 +86,7 @@ function Transaksi() {
             setCart([]);
             setTotal(0);
             setBayar("");
+            fetchData();
 
         } catch (error) {
             console.log(error);
@@ -108,38 +112,71 @@ function Transaksi() {
                         <div className="container-1">
                             <div className="sub-container-2">
                                 <h3>Data Obat</h3>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nama Obat</th>
-                                            <th>Kode</th>
-                                            <th>Kategori</th>
-                                            <th>Harga</th>
-                                            <th>Stok</th>
-                                            <th>Expired</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {Array.isArray(obat) && obat.map((item, index) => (
-                                            <tr
-                                                key={item.id}
-                                                onClick={() => addItem(item)}
-                                                style={{ cursor: "pointer" }}
-                                            >
-                                                <td>{index + 1}</td>
-                                                <td>{item.nama_obat}</td>
-                                                <td>{item.kode_obat}</td>
-                                                <td>{item.kategori_obat?.nama_kategori}</td>
-                                                <td>{item.harga}</td>
-                                                <td>{item.stok}</td>
-                                                <td>{item.tanggal_kadaluarsa}</td>
+                                <div className="container-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nama Obat</th>
+                                                <th>Kode</th>
+                                                <th>Kategori</th>
+                                                <th>Harga</th>
+                                                <th>Stok</th>
+                                                <th>Expired</th>
                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                            {Array.isArray(obat) && obat.
+                                                map((item, index) =>
+                                                item.stok > 0 && (
+                                                <tr
+                                                    key={item.id}
+                                                    onClick={() => addItem(item)}
+                                                    style={{ cursor: "pointer" }}
+                                                >
+                                                    <td>{index + 1}</td>
+                                                    <td>{item.nama_obat}</td>
+                                                    <td>{item.kode_obat}</td>
+                                                    <td>{item.kategori_obat?.nama_kategori}</td>
+                                                    <td>{item.harga}</td>
+                                                    <td>{item.stok}</td>
+                                                    <td>{item.tanggal_kadaluarsa}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {totalData > 10 && (
+                                    <div style={{ marginTop: "10px" }}>
+                                        <button
+                                            disabled={page === 1}
+                                            onClick={() => setPage(page - 1)}
+                                        >
+                                            Prev
+                                        </button>
+                                        {[...Array(lastPage)].map((_, i) => (
+                                            <button
+                                                key={i}
+                                                onClick={() => setPage(i + 1)}
+                                                style={{
+                                                    fontWeight: page === i + 1 ? "bold" : "normal",
+                                                    margin: "0 3px"
+                                                }}
+                                            >
+                                                {i + 1}
+                                            </button>
                                         ))}
-                                    </tbody>
-                                </table>
+
+                                        <button
+                                            disabled={page === lastPage}
+                                            onClick={() => setPage(page + 1)}
+                                        >
+                                            Next
+                                        </button>
+                                    </div>
+                                )}
                             </div>
-                            <div className="sub-container-5">
+                            <div className="sub-container-8">
                                 <form onSubmit={handleSubmit}>
                                     <table>
                                         <thead>
@@ -196,7 +233,7 @@ function Transaksi() {
                     </main>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

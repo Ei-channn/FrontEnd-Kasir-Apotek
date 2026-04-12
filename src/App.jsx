@@ -7,6 +7,7 @@ import Obat from "./pages/Obat"
 import Transaksi from "./pages/Transaksi"
 import History from "./pages/History"
 import Login from "./pages/Auth/Login"
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <Route path="/obat" element={<Obat />}/>
       <Route path="/transaksi" element={<Transaksi />}/>
       <Route path="/history" element={<History />}/>
+      <Route path="/users" element={<Users />}/>
     </Routes>
   )
 }
-  
+
 export default App;

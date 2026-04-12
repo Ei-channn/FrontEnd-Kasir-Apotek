@@ -1,3 +1,380 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ================== LAYOUT ================== */
 .container-main {
   width: 100%;
+}
+
+.container-header {
+  width: 100%;
+  height: 65px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px 0px 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* ================== PROFILE ================== */
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+/* ================== SIDEBAR ================== */
+.container-nav {
+  padding: 5px;
+  background-color: white;
+  width: 15%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.container-nav h1 {
+  color: rgb(0, 0, 0);
+  margin: 10px 0px 0px 20px;
+}
+
+.container-nav nav {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* ================== LIST ================== */
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+ul li {
+  border-radius: 15px;
+  font-size: 1.3rem;
+  padding: 15px;
+  transition: all 0.3s ease;
+  color: rgb(0, 0, 0);
+}
+
+ul li .link {
+  color: inherit;
+}
+
+nav ul li:hover {
+  background: linear-gradient(244deg, #222421 0%, #525252 100%);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* ================== LOGOUT ================== */
+.logout button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.logout-item:hover button {
+  color: white;
+}
+
+/* ================== BUTTON ================== */
+.btn {
+  font-size: 1.2rem;
+  width: 90px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-active {
+  font-size: 1.2rem;
+  width: 90px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  transition: 0.3s;
+}
+
+.bttn {
+  margin-top: 20px;
+  background: linear-gradient(244deg, #222421 0%, #525252 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* ================== TOP ACTION ================== */
+.container-box {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sub-container-box-2 {
+  width: 240px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+/* ================== CARD ================== */
+.container-1 {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.sub-container-1 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 100%;
+  height: 130px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-container-2 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 150%;
+  height: 400px;
+  background-color: white;
+}
+
+.sub-container-3 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 100%;
+  height: 230px;
+  background-color: white;
+}
+
+.sub-container-4 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container-5 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container-6 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container-7 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 110%;
+  height: 230px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container-8 {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 110%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================== TABLE ================== */
+.container-table {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+  color: black;
+  font-weight: normal;
+  background: transparent;
+}
+
+/* ================== SEARCH ================== */
+.container-search {
+  padding-top: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.search {
+  background-color: white;
+  width: 30%;
+  height: 40px;
+  border-radius: 100px;
+}
+
+.container-search input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  padding: 0px 20px;
+  font-size: medium;
+}
+
+.container-search input:focus {
+  outline: none;
+}
+
+/* ================== FLEX CONTENT ================== */
+.main {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.container-data {
+  width: 70%;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+/* ================== BUTTON GROUP ================== */
+.btttn {
+  display: flex;
+  gap: 10px;
+}
+
+.btttn .btn-edit {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(244deg, #222421 0%, #525252 100%);
+}
+
+.btttn .btn-delete {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: red;
+}
+
+/* ================== FORM ================== */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-container-left,
+.input-container-right {
+  width: 50%;
+}
+
+.container-input {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-input label {
+  padding-left: 5px;
+  font-size: 1.1em;
+}
+
+.input {
+  background-color: aliceblue;
+  width: 100%;
+  height: 40px;
+}
+
+.input input,
+.input select {
+  width: 100%;
+  padding: 20px 5px 15px 5px;
+  border: none;
+  font-size: medium;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container-input:focus-within hr {
+  border-bottom-color: #000000;
 }

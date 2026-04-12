@@ -1,4 +1,5 @@
-import './Header.css'
+import Profile from '../assets/profile.png';
+import Notif from '../assets/notif.png';
 
 function Header({title}){
     return (
@@ -9,10 +10,10 @@ function Header({title}){
                 </div>
                 <div className='container-1'>
                     <div className='profile'>
-
+                        <img src={Notif} alt="notif" style={{opacity: '0.7'}}/>
                     </div>
                     <div className='profile'>
-
+                        <img src={Profile} alt="profile" />
                     </div>
                 </div>
             </header>
